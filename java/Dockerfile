@@ -6,5 +6,7 @@ ENV TZ="America/Los_Angeles"
 # Could probably use default-jre instead of jdk
 ENV JAVA_HOME="/usr/lib/jvm/java-1.11.0-openjdk-amd64"
 ENV CLASSPATH=".:/usr/lib/jvm/java-1.11.0-openjdk-amd64/lib"
-
+RUN ls -la /tmp
+RUN chmod +x /tmp/java-install.sh
+RUN cat /tmp/java-install.sh
 RUN /tmp/java-install.sh
